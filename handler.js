@@ -506,14 +506,13 @@ export async function handler(chatUpdate) {
         }
 
         if (!config.autoread) return;
-            await conn.readMessages([m.key]) {
+            await conn.readMessages([m.key])
         return;
-        }
+      
         
         if (!config.statusview) return;
-        if (m.key.remoteJid === 'status@broadcast') {
+        if (m.key.remoteJid === 'status@broadcast') 
         return;
-        }
             
           
         if (!config.autoreaction) return;
