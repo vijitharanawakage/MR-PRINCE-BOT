@@ -35,9 +35,9 @@ global.lolkeysapi = ['GataDios']
 //💌------------------------------------------💌
 //CONFIG VARS. Do not touch them⚠️
 
-  global.autoread process.env.AUTOREAD !== 'false',
-  global.statusView: process.env.STATUSVIEW !== 'false',
-  global.autoreaction: process.env.AutoReaction !== 'false',
+  global.autoread = process.env.AUTOREAD !== 'false',
+  global.statusView = process.env.STATUSVIEW !== 'false',
+  global.autoreaction = process.env.AutoReaction !== 'false',
 
 //💌------------------------------------------💌
 
