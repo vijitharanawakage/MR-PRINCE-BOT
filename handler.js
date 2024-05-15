@@ -505,23 +505,23 @@ export async function handler(chatUpdate) {
             console.log(m, m.quoted, e)
         }
 
-        if (!config.autoread) return;{
-            await conn.readMessages([m.key])
+        if (!config.autoread) return;
+            await conn.readMessages([m.key]) {
         return;
         }
         
-        if (!config.statusview) return;{
-        if (m.key.remoteJid === 'status@broadcast');
+        if (!config.statusview) return;
+        if (m.key.remoteJid === 'status@broadcast') {
         return;
         }
             
           
-        if (!config.autoreaction) return;{
+        if (!config.autoreaction) return;
 if (m.text.match(/(prince|ا|م|dad|gds|oso|love|mente|pero|tion|age|sweet|kiss|cute|ate|and|but|ify)/gi)) {
 let emot = pickRandom(["☺️", "😻", "🤩", "😘", "🥰", "😱", "🤗", "🤫", "😚", "🤭", "☺️", "✨", "🎉", "💗", "♥️", "👑", "😚", "💞", "💖", "💓", "⚡️", "🌝", "🍓", "🍎", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "💟", "🌝", "😎", "😍", "🕊️", "🥀", "🦋", "🐣", "❤‍🩹", "♥️", "😒", "🌸", "🌈", "❣️", "✨", "🙌", "👻", "👑", "🤩", "🐤", "🪽", "🌙", "💫", "🪐", "☀️", "🌪️", "🧸", "🎀", "🎉", "🪞", "🖇️", "📎", "🩷", "🖤", "🤍", "🤎", "💛", "💚", "🩵", "💙", "💜", "💟", "💓", "🩶", "😑", "😶"])
 this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
 function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
-        }
+        
         
     }
 }
