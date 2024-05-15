@@ -506,11 +506,12 @@ export async function handler(chatUpdate) {
         }
 
         if (typeof process.env.AUTOREAD === 'undefined' || process.env.AUTOREAD.toLowerCase() === 'false') return;
-            await conn.readMessages([m.key]);
+            await conn.readMessages([m.key])
+        return;
         
         if (typeof process.env.STATUSVIEW === 'undefined' || process.env.STATUSVIEW.toLowerCase() === 'false') return;
         if (m.key.remoteJid === 'status@broadcast');
-
+        return;
             
           
         if (typeof process.env.AutoReaction === 'undefined' || process.env.AutoReaction.toLowerCase() === 'false') return;
