@@ -505,17 +505,17 @@ export async function handler(chatUpdate) {
             console.log(m, m.quoted, e)
         }
 
-        if (!config.autoread) return;
+        if (typeof autoread) return;
             await conn.readMessages([m.key])
         return;
       
         
-        if (!config.statusview) return;
+        if (typeof statusview) return;
         if (m.key.remoteJid === 'status@broadcast') 
         return;
             
           
-        if (!config.autoreaction) return;
+        if (typeof autoreaction) return;
 if (m.text.match(/(prince|ا|م|dad|gds|oso|love|mente|pero|tion|age|sweet|kiss|cute|ate|and|but|ify)/gi)) {
 let emot = pickRandom(["☺️", "😻", "🤩", "😘", "🥰", "😱", "🤗", "🤫", "😚", "🤭", "☺️", "✨", "🎉", "💗", "♥️", "👑", "😚", "💞", "💖", "💓", "⚡️", "🌝", "🍓", "🍎", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "💟", "🌝", "😎", "😍", "🕊️", "🥀", "🦋", "🐣", "❤‍🩹", "♥️", "😒", "🌸", "🌈", "❣️", "✨", "🙌", "👻", "👑", "🤩", "🐤", "🪽", "🌙", "💫", "🪐", "☀️", "🌪️", "🧸", "🎀", "🎉", "🪞", "🖇️", "📎", "🩷", "🖤", "🤍", "🤎", "💛", "💚", "🩵", "💙", "💜", "💟", "💓", "🩶", "😑", "😶"])
 this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
