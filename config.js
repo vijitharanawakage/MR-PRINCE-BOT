@@ -32,8 +32,16 @@ global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
 global.lolkeysapi = ['GataDios']
 //💌------------------------------------------💌
 
+//💌------------------------------------------💌
+//CONFIG VARS. Do not touch them⚠️
 
+  global.autoread process.env.AUTOREAD !== 'false',
+  global.statusView: process.env.STATUSVIEW !== 'false',
+  global.autoreaction: process.env.AutoReaction !== 'false',
 
+//💌------------------------------------------💌
+
+    
 // APIS
 global.APIs = { // API Prefix
   // name: 'https://website'
