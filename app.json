@@ -46,6 +46,11 @@
       "description": "Put your BOT a name",
       "required": true,
       "value": "ᴛʜᴇ-ᴘʀɪɴᴄᴇ-ᴍᴅ-ʙᴏᴛ"
+      },
+    "DL_MSG": {
+      "description": "Video downloader caption",
+      "required": true,
+      "value": "💌--------------------ᴘʀɪɴᴄᴇ-ᴍᴅ----------------------💌"
        },
     "STATUSVIEW": {
       "description": "Make it true if you want bot to view status",
