@@ -18,7 +18,7 @@
       "value": "public"
        },
      "HKEY": {
-      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
+      "description": "Put your Heroku API key Here",
       "required": true,
       "value": ""
     },
@@ -28,27 +28,37 @@
       "value": ""
        },
     "PREFIX": {
-      "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
+      "description": "Put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
       "required": false,
       "value": ""
      },
     "antidelete": {
-      "description": "bot will forward deleted messages if you make it true",
+      "description": "BOT will forward deleted messages if you make it true",
       "required": false,
       "value": "false"
        },
+      "BOT_OWNERS": {
+      "description": "Put your Number as Owner",
+      "required": true,
+      "value": "923092668108;Prince;923092668108;GDS"
+       },
+    "BOT_NAME": {
+      "description": "Put your BOT a name",
+      "required": true,
+      "value": "ᴛʜᴇ-ᴘʀɪɴᴄᴇ-ᴍᴅ-ʙᴏᴛ"
+       },
     "STATUSVIEW": {
-      "description": "make it true if you want bot to view status",
+      "description": "Make it true if you want bot to view status",
       "required": false,
       "value": "false"
     },
     "AutoReaction": {
-      "description": "make it true if you want bot to react on chats",
+      "description": "Make it true if you want bot to react on chats",
       "required": false,
       "value": "false"
     },
     "SESSION_ID": {
-      "description": "your session id",
+      "description": "put your session ID here in the box below",
       "required": true,
       "value": ""
     }
