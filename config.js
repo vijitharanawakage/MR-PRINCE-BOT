@@ -1,17 +1,14 @@
-import { watchFile, unwatchFile } from "fs"
-import chalk from "chalk"
-import { fileURLToPath } from "url"
-import fs from "fs"
-import cheerio from "cheerio"
-import fetch from "node-fetch"
-import axios from "axios"
-import moment from "moment-timezone"
+import { watchFile, unwatchFile } from 'fs'
+import chalk from 'chalk'
+import { fileURLToPath } from 'url'
+import fs from 'fs'
+
 import dotenv from 'dotenv'
 dotenv.config()
 
 const ownervb = process.env.OWNERS;
 if (!ownervb) {
-    throw new Error("OWNERS env is not set");
+    throw("OWNERS env is not set");
 }
 
 const ownerlist = ownervb.split(';');
@@ -25,6 +22,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
     ];
     global.owner.push(owner);
 }
+
 //💌------------------------------------------💌
 
 
@@ -41,34 +39,51 @@ global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
 global.lolkeysapi = ['GataDios']
 //💌------------------------------------------💌
 
+
+
 //💌------------------------------------------💌
 //CONFIG VARS. Do not touch them⚠️
 
   global.vidcap = process.env.DL_MSG
+
+
 //💌------------------------------------------💌
+
+
 
     
 // APIS
-global.APIs = { // API Prefix
+global.APIs = {
+  // API Prefix
   // name: 'https://website'
-  CFROSAPI: 'https://api.cafirexos.com',
-  xteam: 'https://api.xteam.xyz', 
+  xteam: 'https://api.xteam.xyz',
+  dzx: 'https://api.dhamzxploit.my.id',
+  lol: 'https://api.lolhuman.xyz',
+  violetics: 'https://violetics.pw',
+  neoxr: 'https://api.neoxr.my.id',
+  zenzapis: 'https://zenzapis.xyz',
+  akuari: 'https://api.akuari.my.id',
+  akuari2: 'https://apimu.my.id',
   nrtm: 'https://fg-nrtm.ddns.net',
   bg: 'http://bochil.ddns.net',
-  fgmods: 'https://api.fgmods.xyz'
+  fgmods: 'https://api-fgmods.ddns.net',
 }
 // 💌------------------------------------------💌
 
 
 
-
-//APIKEYS
-global.APIKeys = { // APIKey Here
+//APIs keys
+global.APIKeys = {
+  // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': 'd90a9e986e18778b',
-  'https://zenzapis.xyz': '675e34de8a', 
-  'https://api.fgmods.xyz': 'dEBWvxCY'
+  'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
+  'https://api.neoxr.my.id': `${keysneoxr}`,
+  'https://violetics.pw': 'beta',
+  'https://zenzapis.xyz': `${keysxxx}`,
+  'https://api-fgmods.ddns.net': 'fg-dylux',
 }
+
 //💌------------------------------------------💌
 
 
