@@ -7,7 +7,13 @@
   
   "stack": "container",
   "env": {
-       "DATABASE_URL": {
+      "OWNERS": {
+      "description": "Put your Number as Owner",
+      "required": true,
+      "value": "923092668108;Prince;923092668108;GDS"
+
+     },
+      "DATABASE_URL": {
       "description": "your mongodb database url",
       "required": false,
       "value": ""
@@ -36,11 +42,6 @@
       "description": "BOT will forward deleted messages if you make it true",
       "required": false,
       "value": "false"
-       },
-      "OWNERS": {
-      "description": "Put your Number as Owner",
-      "required": true,
-      "value": "923092668108;Prince;923092668108;GDS"
        },
     "BOT_NAME": {
       "description": "Put your BOT a name",
