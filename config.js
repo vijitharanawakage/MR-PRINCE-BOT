@@ -9,11 +9,7 @@ import moment from "moment-timezone"
 import dotenv from 'dotenv'
 dotenv.config()
 
-
-
-
-
-const ownervb = process.env.BOT_OWNERS;
+const ownervb = process.env.OWNERS;
 if (!ownervb) {
     throw new Error("OWNERS env is not set");
 }
