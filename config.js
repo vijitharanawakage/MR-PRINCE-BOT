@@ -6,16 +6,29 @@ import cheerio from "cheerio"
 import fetch from "node-fetch"
 import axios from "axios"
 import moment from "moment-timezone"
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 
 
 
-global.owner = [
-  ["923092668108", "Prince", false],
-  [''], 
-  [''] 
-]
+const ownervb = process.env.BOT_OWNERS;
+if (!ownervb) {
+    throw new Error("OWNERS env is not set");
+}
+
+const ownerlist = ownervb.split(';');
+
+global.owner = [];
+for (let i = 0; i < ownerlist.length; i += 2) {
+    const owner = [
+        ownerlist[i],            
+        ownerlist[i + 1],         
+        true                        
+    ];
+    global.owner.push(owner);
+}
 //💌------------------------------------------💌
 
 
@@ -128,7 +141,7 @@ global.developer = 'https://wa.me/message/DCAK67ON3XVOG1' //contact
 
 
 //Sticker WM
-global.botname = '𝘗𝘙𝘐𝘕𝘊𝘌-𝘉𝘖𝘛-𝘔𝘋'
+global.botname = process.env.BOT_NAME
 global.princebot = '🛡️𝘗𝘙𝘐𝘕𝘊𝘌-𝘉𝘖𝘛-𝘔𝘋🛡️'
 global.packname = 'Prince♥️' 
 global.author = 'Prince♥️' 
