@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   if (!args[0] && !m.quoted) throw `Give the link of the video Tiktok or quote a tiktok link`
   if (!args[0].match(/tiktok/gi)) throw `Verify that the link is from TikTok`
 
-  let cap = `${vidcap}`;
+  let txt = 'Here your Requested video'
 
   try {
     const {
@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   } catch (err) {
     try {
       let p = await fg.tiktok(args[0])
-      conn.sendFile(m.chat, p.play, 'tiktok.mp4', cap, m)
+      conn.sendFile(m.chat, p.play, 'tiktok.mp4', txt, m)
     } catch {
       m.reply('*An unexpected error occurred*')
     }
