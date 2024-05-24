@@ -3,7 +3,7 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
-        if (!args[0]) throw `✳️ Give the link of the video Tiktok or quote a tiktok link\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com`
+        if (!args[0]) throw `✳️ Give the link of the video Tiktok or quote a tiktok link\n\n 📌 Example: ${usedPrefix + command} https://vm.tiktok.com`
         if (!args[0].match(/tiktok/gi)) throw `❎ Please provide a valid tiktok Link`
         m.react(rwait)
       
