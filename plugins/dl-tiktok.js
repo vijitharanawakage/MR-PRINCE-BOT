@@ -39,7 +39,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         }
 
       } catch (error) {
-        m.reply(`❎ ${mssg.error}`)
+        m.reply(`❎ Error`)
     }
    
 }
