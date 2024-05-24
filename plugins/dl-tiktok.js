@@ -14,12 +14,12 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         if (!data.result.images) {
             let tex = `
 ┌─⊷ *𓅓TIKTOK DL𓅓* 
-┃ *${mssg.name}:* ${data.result.author.nickname}
-┃ *${mssg.username}:* ${data.result.author.unique_id}
-┃ *${mssg.duration}:* ${data.result.duration}
+┃ *${msg.name}:* ${data.result.author.nickname}
+┃ *${msg.username}:* ${data.result.author.unique_id}
+┃ *${msg.duration}:* ${data.result.duration}
 ┃ *Likes:* ${data.result.digg_count}
-┃ *${mssg.views}:* ${data.result.play_count}
-┃ *${mssg.desc}:* ${data.result.title}
+┃ *${msg.views}:* ${data.result.play_count}
+┃ *${msg.desc}:* ${data.result.title}
 └───────────𓅓
 `
             conn.sendFile(m.chat, data.result.play, 'tiktok.mp4', tex, m);
@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
             let cap = `
 ┌─⊷ *𓅓TIKTOK DL𓅓*            
 ┃ *Likes:* ${data.result.digg_count}
-┃ *${mssg.desc}:* ${data.result.title}
+┃ *${msg.desc}:* ${data.result.title}
 └───────────𓅓
 `
             for (let ttdl of data.result.images) {
@@ -39,7 +39,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         }
 
       } catch (error) {
-        m.reply(`❎ ${mssg.error}`)
+        m.reply(`❎ ${msg.error}`)
     }
    
 }
