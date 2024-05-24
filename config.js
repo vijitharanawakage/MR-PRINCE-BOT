@@ -80,8 +80,8 @@ global.APIKeys = {
   'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
   'https://api.neoxr.my.id': `${keysneoxr}`,
   'https://violetics.pw': 'beta',
-  'https://zenzapis.xyz': `${keysxxx}`,
-  'https://api-fgmods.ddns.net': 'fg-dylux',
+  'https://zenzapis.xyz': `${keysxxx}`
+   'https://api.fgmods.xyz': 'm2XBbNvz'
 }
 
 //💌------------------------------------------💌
