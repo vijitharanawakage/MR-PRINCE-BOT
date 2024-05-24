@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
         if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com....link`
-        if (!args[0].match(/tiktok/gi)) throw `❎ ${mssg.noLink('TikTok')}`
+        if (!args[0].match(/tiktok/gi)) throw `❎ ${msg.noLink('TikTok')}`
         m.react(rwait)
       
         try {
