@@ -3,8 +3,8 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
-        if (!args[0]) throw `✳️ ${mssg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com/ZMYG92bUh/`
-        if (!args[0].match(/tiktok/gi)) throw `❎ ${mssg.noLink('TikTok')}`
+        if (!args[0]) throw `✳️ Give the link of the video Tiktok or quote a tiktok link\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com`
+        if (!args[0].match(/tiktok/gi)) throw `❎ Please provide a valid tiktok Link`
         m.react(rwait)
       
         try {
@@ -13,21 +13,23 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
         if (!data.result.images) {
             let tex = `
-┌─⊷ *TIKTOK DL* 
-▢ *${mssg.name}:* ${data.result.author.nickname}
-▢ *${mssg.username}:* ${data.result.author.unique_id}
-▢ *${mssg.duration}:* ${data.result.duration}
-▢ *Likes:* ${data.result.digg_count}
-▢ *${mssg.views}:* ${data.result.play_count}
-▢ *${mssg.desc}:* ${data.result.title}
+┌─⊷ *TIKTOK IMG* 
+┃ *Name:* ${data.result.author.nickname}
+┃ *Username:* ${data.result.author.unique_id}
+┃ *Duration:* ${data.result.duration}
+┃ *Likes:* ${data.result.digg_count}
+┃ *Views:* ${data.result.play_count}
+┃ *Description:* ${data.result.title}
 └───────────
 `
             conn.sendFile(m.chat, data.result.play, 'tiktok.mp4', tex, m);
             m.react(done)
         } else {
             let cap = `
-▢ *Likes:* ${data.result.digg_count}
-▢ *${mssg.desc}:* ${data.result.title}
+┌─⊷ *TIKTOK VID*           
+┃ *Likes:* ${data.result.digg_count}
+┃ *Description:* ${data.result.title}
+└───────────
 `
             for (let ttdl of data.result.images) {
                 conn.sendMessage(m.chat, { image: { url: ttdl }, caption: cap }, { quoted: m })
@@ -44,7 +46,6 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
 handler.help = ['tiktok']
 handler.tags = ['dl']
-handler.command = ['tiktok', 'tt', 'tiktokimg', 'tiktokslide']
-handler.diamond = true
+handler.command = ['tiktok', 'tt', 'tiktokimg', 'tk']
 
 export default handler
