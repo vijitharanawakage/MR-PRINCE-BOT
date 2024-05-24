@@ -3,8 +3,8 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     
-        if (!args[0]) throw `✳️ ${msg.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com....link`
-        if (!args[0].match(/tiktok/gi)) throw `❎ ${msg.noLink('TikTok')}`
+        if (!args[0]) throw `✳️ ${m.noLink('TikTok')}\n\n 📌 ${mssg.example} : ${usedPrefix + command} https://vm.tiktok.com....link`
+        if (!args[0].match(/tiktok/gi)) throw `❎ ${m.noLink('TikTok')}`
         m.react(rwait)
       
         try {
@@ -14,12 +14,12 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         if (!data.result.images) {
             let tex = `
 ┌─⊷ *𓅓TIKTOK DL𓅓* 
-┃ *${msg.name}:* ${data.result.author.nickname}
-┃ *${msg.username}:* ${data.result.author.unique_id}
-┃ *${msg.duration}:* ${data.result.duration}
+┃ *${m.name}:* ${data.result.author.nickname}
+┃ *${m.username}:* ${data.result.author.unique_id}
+┃ *${m.duration}:* ${data.result.duration}
 ┃ *Likes:* ${data.result.digg_count}
-┃ *${msg.views}:* ${data.result.play_count}
-┃ *${msg.desc}:* ${data.result.title}
+┃ *${m.views}:* ${data.result.play_count}
+┃ *${m.desc}:* ${data.result.title}
 └───────────𓅓
 `
             conn.sendFile(m.chat, data.result.play, 'tiktok.mp4', tex, m);
@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
             let cap = `
 ┌─⊷ *𓅓TIKTOK DL𓅓*            
 ┃ *Likes:* ${data.result.digg_count}
-┃ *${msg.desc}:* ${data.result.title}
+┃ *${m.desc}:* ${data.result.title}
 └───────────𓅓
 `
             for (let ttdl of data.result.images) {
@@ -39,7 +39,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         }
 
       } catch (error) {
-        m.reply(`❎ ${msg.error}`)
+        m.reply(`❎ ${m.error}`)
     }
    
 }
